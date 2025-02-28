@@ -1,13 +1,212 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio web de un café">
+    <title>Sitio web de un Café</title>
+    <link rel="icon" href="public/images/svg/icon.ico">
+    <link rel="stylesheet" href="public/css/normalize.css">
+    <link rel="stylesheet" href="public/css/style.css">
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <!-- Reglas linters -->
+    <!-- "@html-eslint/eslint-plugin": "^0.35.0",
+      "@html-eslint/parser": "^0.35.0",
+      "eslint": "^9.21.0",
+      "eslint-config-standard": "^17.1.0",
+      "eslint-plugin-import": "^2.31.0",
+      "stylelint": "^16.14.1",
+      "stylelint-config-standard": "^37.0.0", -->
+    <!-- Encabezado -->
+    <header class="header">
+      <a class="header__logo" href="#">☕ Coffee</a>
+      <nav class="header__nav">
+        <img class="header__nav__button" src="" alt="Cerrar Menú">
+        <ul class="header__nav__list">
+          <li><a class="header__nav__list__link" href="#">Inicio</a></li>
+          <li><a class="header__nav__list__link" href="#about">Nosotros</a></li>
+          <li><a class="header__nav__list__link" href="#menu">Menu</a></li>
+          <li><a class="header__nav__list__link" href="#testimonials">Testimonios</a></li>
+          <li><a class="header__nav__list__link" href="#gallery">Galería</a></li>
+          <li><a class="header__nav__list__link" href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+      <img class="header__button" src="" alt="Menú Responsive">
+    </header>
+
+    <!-- Principal -->
+    <main class="main">
+      <img class="main__logo" src="public/images/logo.webp" alt="Logo de la cafeteria">
+      <article class="main__info">
+        <h1 class="main__info__title">El Mejor Café</h1>
+        <h2 class="main__info__subtitle">¡Haz que tu día sea grandioso con tu café especial!</h2>
+        <p class="main__info__text">Bienvenido a nuestro paraíso del café, donde cada grano cuenta una historia y cada taza provoca alegría.</p>
+        <div class="main__info__buttons">
+          <a class="main__info__buttons__button" href="#">Ordena ahora</a>
+          <a class="main__info__buttons__button" href="#">Contáctanos</a>
+        </div>
+      </article>
+    </main>
+
+    <!-- Acerca de -->
+    <section id="about" class="about">
+      <article class="about__info">
+        <h2 class="about__info__title">Sobre nosotros</h2>
+        <p class="about__info__text">En Coffee House en Berndorf, Alemania. Nos enorgullecemos de ser un destino de referencia para los amantes del café y de la conversación. Nos dedicamos a brindar una experiencia de café excepcional en un ambiente acogedor y atractivo, donde los huéspedes pueden relajarse, descansar y disfrutar de su tiempo con comodidad.</p>
+        <div class="about__info__social">
+          <a class="about__info__social__link" href="#">
+            <img class="about__info__social__link__img" src="public/images/svg/facebook.svg" alt="Facebook">
+          </a>
+          <a class="about__info__social__link" href="#">
+            <img class="about__info__social__link__img" src="public/images/svg/instagram.svg" alt="Instagram">
+          </a>
+          <a class="about__info__social__link" href="#">
+            <img class="about__info__social__link__img" src="public/images/svg/twitter.svg" alt="Twitter">
+          </a>
+        </div>
+      </article>
+      <img class="about__img" src="public/images/about.webp" alt="Acerca de nosotros">
+    </section>
+
+    <!-- Menú -->
+    <section id="menu" class="menu">
+      <h2 class="menu__title">Nuestro Menú</h2>
+      <article class="menu__item">
+        <img class="menu__item__img" src="public/images/hot-beverages.webp" alt="Cold Beverages">
+        <h3 class="menu__item__title">Bebidas calientes</h3>
+        <p class="menu__item__description">Amplia gama de café humeante para que te sientas fresco y ligero.</p>
+      </article>
+      <article class="menu__item">
+        <img class="menu__item__img" src="public/images/cold-beverages.webp" alt="Cold Beverages">
+        <h3 class="menu__item__title">Bebidas frías</h3>
+        <p class="menu__item__description">Café frío cremoso y espumoso para refrescarte.</p>
+      </article>
+      <article class="menu__item">
+        <img class="menu__item__img" src="public/images/refreshment.webp" alt="Cold Beverages">
+        <h3 class="menu__item__title">Refresco</h3>
+        <p class="menu__item__description">Bebida refrescante de frutas y hielo para sentirse renovado.</p>
+      </article>
+      <article class="menu__item">
+        <img class="menu__item__img" src="public/images/special-combo.webp" alt="Cold Beverages">
+        <h3 class="menu__item__title">Combos especiales</h3>
+        <p class="menu__item__description">Tus combinaciones favoritas de comida y bebida.</p>
+      </article>
+      <article class="menu__item">
+        <img class="menu__item__img" src="public/images/desserts.webp" alt="Cold Beverages">
+        <h3 class="menu__item__title">Postre</h3>
+        <p class="menu__item__description">Sacia tu paladar y déjate tentar por un capricho culinario.</p>
+      </article>
+      <article class="menu__item">
+        <img class="menu__item__img" src="public/images/burger-frenchfries.webp" alt="Cold Beverages">
+        <h3 class="menu__item__title">Hamburguesa y papas fritas</h3>
+        <p class="menu__item__description">Bocadillos rápidos para saciar el hambre de los más pequeños.</p>
+      </article>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonials" class="testimonials">
+      <h2 class="testimonials__title">Testimonios</h2>
+      <div class="testimonial__slider">
+        <article class="testimonials__slider__item">
+          <img class="testimonials__slider__item__img" src="public/images/testimonials-1.webp" alt="Testimonio 1">
+          <h3 class="testimonials__slider__item__title">Sarah Johnson</h3>
+          <p class="testimonials__slider__item__description">"Me encantó el tostado francés. Perfectamente equilibrado y rico. ¡Lo volveré a pedir!"</p>
+        </article>
+        <article class="testimonials__slider__item">
+          <img class="testimonials__slider__item__img" src="public/images/testimonials-2.webp" alt="Testimonio 1">
+          <h3 class="testimonials__slider__item__title">James Wilson</h3>
+          <p class="testimonials__slider__item__description">"¡Excelente mezcla de espresso! Sabor suave y fuerte. ¡Envío rápido también!"</p>
+        </article>
+        <article class="testimonials__slider__item">
+          <img class="testimonials__slider__item__img" src="public/images/testimonials-3.webp" alt="Testimonio 1">
+          <h3 class="testimonials__slider__item__title">Michael Brown</h3>
+          <p class="testimonials__slider__item__description">"Fantástico sabor a moca. Fresco y aromático. ¡Envío rápido!"</p>
+        </article>
+        <article class="testimonials__slider__item">
+          <img class="testimonials__slider__item__img" src="public/images/testimonials-4.webp" alt="Testimonio 1">
+          <h3 class="testimonials__slider__item__title">Emily Harris</h3>
+          <p class="testimonials__slider__item__description">"¡Excelente calidad! Granos frescos y entrega rápida. Muy recomendable."</p>
+        </article>
+        <article class="testimonials__slider__item">
+          <img class="testimonials__slider__item__img" src="public/images/testimonials-5.webp" alt="Testimonio 1">
+          <h3 class="testimonials__slider__item__title">Anthony Thompson</h3>
+          <p class="testimonials__slider__item__description">"¡El mejor descafeinado que he probado! Suave y sabroso. Llegó enseguida."</p>
+        </article>
+      </div>
+      <div class="testimonials__pagination"></div>
+      <div class="testimonial__button testimonial__button--prev"></div>
+      <div class="testimonial__button testimonial__button--next"></div>
+    </section>
+
+    <!-- Galería -->
+    <section id="gallery" class="gallery">
+      <h2 class="gallery__title">Galería</h2>
+      <img class="gallery__item" src="public/images/gallery-1.webp" alt="Galería 1">
+      <img class="gallery__item" src="public/images/gallery-2.webp" alt="Galería 2">
+      <img class="gallery__item" src="public/images/gallery-3.webp" alt="Galería 3">
+      <img class="gallery__item" src="public/images/gallery-4.webp" alt="Galería 4">
+      <img class="gallery__item" src="public/images/gallery-5.webp" alt="Galería 5">
+      <img class="gallery__item" src="public/images/gallery-6.webp" alt="Galería 6">
+    </section>
+
+    <!-- Contacto -->
+    <section id="contact" class="contact">
+      <h2 class="contact__title">Contáctanos</h2>
+      <form class="contact__form" method="post">
+        <input class="contact__form__input" type="text" placeholder="Tu nombre">
+        <input class="contact__form__input" type="email" placeholder="Tu correo electrónico">
+        <textarea class="contact__form__input" placeholder="Tu mensaje"></textarea>
+        <button class="contact__form__button" type="submit">Enviar</button>
+      </form>
+      <ul class="contact__info">
+        <li class="contact__info__list">
+          <img class="contact__info__list__img" src="public/images/svg/location.svg" alt="Reloj">
+          <p class="contact__info__list__text">Av. Arequipa 305, ASA, Arequipa</p>
+        </li>
+        <li class="contact__info__list">
+          <img class="contact__info__list__img" src="public/images/svg/email.svg" alt="Reloj">
+          <p class="contact__info__list__text">info@coffeeshopwebsite.com</p>
+        </li>
+        <li class="contact__info__list">
+          <img class="contact__info__list__img" src="public/images/svg/phone.svg" alt="Reloj">
+          <p class="contact__info__list__text">914314466</p>
+        </li>
+        <li class="contact__info__list">
+          <img class="contact__info__list__img" src="public/images/svg/clock.svg" alt="Reloj">
+          <p class="contact__info__list__text">Lunes a Viernes: 9:00 AM - 5:00 PM</p>
+        </li>
+        <li class="contact__info__list">
+          <img class="contact__info__list__img" src="public/images/svg/clock.svg" alt="Reloj">
+          <p class="contact__info__list__text">Sábados: 10:00 AM - 3:00 PM</p>
+        </li>
+        <li class="contact__info__list">
+          <img class="contact__info__list__img" src="public/images/svg/clock.svg" alt="Reloj">
+          <p class="contact__info__list__text">Domingos: Cerrado</p>
+        </li>
+        <li class="contact__info__list">
+          <img class="contact__info__list__img" src="public/images/svg/internet.svg" alt="Internet">
+          <p class="contact__info__list__text">www.coffeehouse.com</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+      <p class="footer__text">&copy; 2025 Coffee Shop</p>
+      <div class="footer__social">
+        <a class="footer__social__link" href="#">
+          <img class="footer__social__link__img" src="public/images/svg/facebook.svg" alt="Facebook">
+        </a>
+        <a class="about__info__social__link" href="#">
+          <img class="footer__social__link__img" src="public/images/svg/instagram.svg" alt="Instagram">
+        </a>
+        <a class="about__info__social__link" href="#">
+          <img class="footer__social__link__img" src="public/images/svg/twitter.svg" alt="Twitter">
+        </a>
+      </div>
+      <p class="footer__text">Todos los derechos reservados</p>
+    </footer>
+    <script src="/src/main.js"></script>
   </body>
 </html>

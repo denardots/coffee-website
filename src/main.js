@@ -1,24 +1,48 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import Swiper from "swiper";
+import {Navigation, Pagination} from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+const header = document.getElementById("header");
+const nav = document.getElementById("nav");
+const menuCloseButton = document.getElementById("menuCloseButton");
+const menuOpenButton = document.getElementById("menuOpenButton");
+const navLinks = document.querySelectorAll(".header__nav__list__link");
 
-setupCounter(document.querySelector('#counter'))
+menuOpenButton.addEventListener("click", () => {
+  nav.classList.toggle("header__nav--active");
+  header.classList.toggle("header--inactive");
+});
+
+menuCloseButton.addEventListener("click", () => menuOpenButton.click());
+
+navLinks.forEach(link => link.addEventListener("click", () => menuOpenButton.click()));
+
+// eslint-disable-next-line no-unused-vars
+const swiper = new Swiper(".swiper", {
+  modules: [Navigation, Pagination],
+  loop: true,
+  grabCursor: true,
+  spacesBetween: 25,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1
+    },
+    768: {
+      slidesPerView: 2
+    },
+    1024: {
+      slidesPerView: 3
+    }
+  }
+});

@@ -7,7 +7,6 @@
     <title>Sitio web de un Café</title>
     <link rel="icon" href="public/images/svg/icon.ico">
     <link rel="stylesheet" href="public/css/normalize.css">
-    <link rel="stylesheet" href="public/css/style.css">
   </head>
   <body>
     <!-- Encabezado -->
@@ -16,7 +15,7 @@
         <a class="header__logo" href="#">☕ Coffee</a>
         <nav id="nav" class="header__nav">
           <img id="menuCloseButton" class="header__nav__button" src="public/images/svg/close.svg" alt="Cerrar Menú">
-          <ul class="header__nav__list">
+          <ul class="header__nav__list flex-column flex-center">
             <li><a class="header__nav__list__link" href="#">Inicio</a></li>
             <li><a class="header__nav__list__link" href="#about">Nosotros</a></li>
             <li><a class="header__nav__list__link" href="#menu">Menú</a></li>
@@ -31,13 +30,13 @@
 
     <!-- Principal -->
     <main class="main">
-      <div class="main-container content-width">
+      <div class="main-container content-width flex-column flex-center">
         <img class="main__logo" src="public/images/logo.webp" alt="Logo de la cafeteria">
-        <article class="main__info">
+        <article class="main__info flex-column">
           <h1 class="main__info__title">El Mejor Café</h1>
           <h2 class="main__info__subtitle">¡Haz que tu día sea grandioso con tu café especial!</h2>
           <p class="main__info__text">Bienvenido a nuestro paraíso del café, donde cada grano cuenta una historia y cada taza provoca alegría.</p>
-          <div class="main__info__buttons">
+          <div class="main__info__buttons social">
             <a class="main__info__buttons__button" href="#">Ordena ahora</a>
             <a class="main__info__buttons__button main__info__buttons__button--secondary" href="#">Contáctanos</a>
           </div>
@@ -47,9 +46,9 @@
 
     <!-- Acerca de -->
     <section id="about" class="about">
-      <div class="about-container content-width section-padding">
+      <div class="about-container content-width section-padding flex-column">
         <article class="about__info">
-          <h2 class="about__info__title section-title">Sobre nosotros</h2>
+          <h2 class="section-title">Sobre nosotros</h2>
           <p class="about__info__text">En Coffee House en Berndorf, Alemania. Nos enorgullecemos de ser un destino de referencia para los amantes del café y de la conversación. Nos dedicamos a brindar una experiencia de café excepcional en un ambiente acogedor y atractivo, donde los huéspedes pueden relajarse, descansar y disfrutar de su tiempo con comodidad.</p>
           <div class="social">
             <a class="social__link" href="#">
@@ -70,33 +69,33 @@
     <!-- Menú -->
     <section id="menu" class="menu section-padding">
       <h2 class="menu__title section-title">Nuestro Menú</h2>
-      <div class="menu-container content-width">
-        <article class="menu__item">
+      <div class="menu-container content-width gallery-grid">
+        <article class="menu__item flex-column">
           <img class="menu__item__img" src="public/images/hot-beverages.webp" alt="Cold Beverages">
           <h3 class="menu__item__title">Bebidas calientes</h3>
           <p class="menu__item__description">Amplia gama de café humeante para que te sientas fresco y ligero.</p>
         </article>
-        <article class="menu__item">
+        <article class="menu__item flex-column">
           <img class="menu__item__img" src="public/images/cold-beverages.webp" alt="Cold Beverages">
           <h3 class="menu__item__title">Bebidas frías</h3>
           <p class="menu__item__description">Café frío cremoso y espumoso para refrescarte.</p>
         </article>
-        <article class="menu__item">
+        <article class="menu__item flex-column">
           <img class="menu__item__img" src="public/images/refreshment.webp" alt="Cold Beverages">
           <h3 class="menu__item__title">Refresco</h3>
           <p class="menu__item__description">Bebida refrescante de frutas y hielo para sentirse renovado.</p>
         </article>
-        <article class="menu__item">
+        <article class="menu__item flex-column">
           <img class="menu__item__img" src="public/images/special-combo.webp" alt="Cold Beverages">
           <h3 class="menu__item__title">Combos especiales</h3>
           <p class="menu__item__description">Tus combinaciones favoritas de comida y bebida.</p>
         </article>
-        <article class="menu__item">
+        <article class="menu__item flex-column">
           <img class="menu__item__img" src="public/images/desserts.webp" alt="Cold Beverages">
           <h3 class="menu__item__title">Postre</h3>
           <p class="menu__item__description">Sacia tu paladar y déjate tentar por un capricho culinario.</p>
         </article>
-        <article class="menu__item">
+        <article class="menu__item flex-column">
           <img class="menu__item__img" src="public/images/burger-frenchfries.webp" alt="Cold Beverages">
           <h3 class="menu__item__title">Hamburguesa y papas fritas</h3>
           <p class="menu__item__description">Bocadillos rápidos para saciar el hambre de los más pequeños.</p>
@@ -106,47 +105,45 @@
 
     <!-- Testimonios -->
     <section id="testimonials" class="testimonials section-padding">
-      <div class="content-width">
-        <h2 class="testimonials__title section-title">Testimonios</h2>
-        <div class="testimonials-container swiper">
-          <div class="testimonial__slider swiper-wrapper">
-            <article class="testimonials__slider__item swiper-slide">
-              <img class="testimonials__slider__item__img" src="public/images/testimonials-1.webp" alt="Testimonio 1">
-              <h3 class="testimonials__slider__item__title">Sarah Johnson</h3>
-              <p class="testimonials__slider__item__description">"Me encantó el tostado francés. Perfectamente equilibrado y rico. ¡Lo volveré a pedir!"</p>
-            </article>
-            <article class="testimonials__slider__item swiper-slide">
-              <img class="testimonials__slider__item__img" src="public/images/testimonials-2.webp" alt="Testimonio 1">
-              <h3 class="testimonials__slider__item__title">James Wilson</h3>
-              <p class="testimonials__slider__item__description">"¡Excelente mezcla de espresso! Sabor suave y fuerte. ¡Envío rápido también!"</p>
-            </article>
-            <article class="testimonials__slider__item swiper-slide">
-              <img class="testimonials__slider__item__img" src="public/images/testimonials-3.webp" alt="Testimonio 1">
-              <h3 class="testimonials__slider__item__title">Michael Brown</h3>
-              <p class="testimonials__slider__item__description">"Fantástico sabor a moca. Fresco y aromático. ¡Envío rápido!"</p>
-            </article>
-            <article class="testimonials__slider__item swiper-slide">
-              <img class="testimonials__slider__item__img" src="public/images/testimonials-4.webp" alt="Testimonio 1">
-              <h3 class="testimonials__slider__item__title">Emily Harris</h3>
-              <p class="testimonials__slider__item__description">"¡Excelente calidad! Granos frescos y entrega rápida. Muy recomendable."</p>
-            </article>
-            <article class="testimonials__slider__item swiper-slide">
-              <img class="testimonials__slider__item__img" src="public/images/testimonials-5.webp" alt="Testimonio 1">
-              <h3 class="testimonials__slider__item__title">Anthony Thompson</h3>
-              <p class="testimonials__slider__item__description">"¡El mejor descafeinado que he probado! Suave y sabroso. Llegó enseguida."</p>
-            </article>
-          </div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-slide-button swiper-button-prev"></div>
-          <div class="swiper-slide-button swiper-button-next"></div>
+      <h2 class="section-title">Testimonios</h2>
+      <div class="swiper content-width">
+        <div class="swiper-wrapper">
+          <article class="testimonials__item swiper-slide flex-column">
+            <img class="testimonials__item__img" src="public/images/testimonials-1.webp" alt="Testimonio 1">
+            <h3>Sarah Johnson</h3>
+            <p>"Me encantó el tostado francés. Perfectamente equilibrado y rico. ¡Lo volveré a pedir!"</p>
+          </article>
+          <article class="testimonials__item swiper-slide flex-column">
+            <img class="testimonials__item__img" src="public/images/testimonials-2.webp" alt="Testimonio 2">
+            <h3>James Wilson</h3>
+            <p>"¡Excelente mezcla de espresso! Sabor suave y fuerte. ¡Envío rápido también!"</p>
+          </article>
+          <article class="testimonials__item swiper-slide flex-column">
+            <img class="testimonials__item__img" src="public/images/testimonials-3.webp" alt="Testimonio 3">
+            <h3>Michael Brown</h3>
+            <p>"Fantástico sabor a moca. Fresco y aromático. ¡Envío rápido!"</p>
+          </article>
+          <article class="testimonials__item swiper-slide flex-column">
+            <img class="testimonials__item__img" src="public/images/testimonials-4.webp" alt="Testimonio 4">
+            <h3>Emily Harris</h3>
+            <p>"¡Excelente calidad! Granos frescos y entrega rápida. Muy recomendable."</p>
+          </article>
+          <article class="testimonials__item swiper-slide flex-column">
+            <img class="testimonials__item__img" src="public/images/testimonials-5.webp" alt="Testimonio 5">
+            <h3>Anthony Thompson</h3>
+            <p>"¡El mejor descafeinado que he probado! Suave y sabroso. Llegó enseguida."</p>
+          </article>
         </div>
+        <div class="swiper-pagination"></div>
+        <div class="testimonials__button swiper-button-prev"></div>
+        <div class="testimonials__button swiper-button-next"></div>
       </div>
     </section>
 
     <!-- Galería -->
     <section id="gallery" class="gallery content-width section-padding">
-      <h2 class="gallery__title section-title">Galería</h2>
-      <div class="gallery-container">
+      <h2 class="section-title">Galería</h2>
+      <div class="gallery-grid">
         <figure class="gallery__item">
           <img class="gallery__item__img" src="public/images/gallery-1.webp" alt="Galería 1">
         </figure>
@@ -170,42 +167,42 @@
 
     <!-- Contacto -->
     <section id="contact" class="contact section-padding">
-      <h2 class="contact__title section-title">Contáctanos</h2>
-      <div class="contact-container content-width">
-        <form class="contact__form" method="post">
+      <h2 class="section-title">Contáctanos</h2>
+      <div class="contact-container content-width flex-column">
+        <form class="contact__form flex-column" method="post">
           <input class="contact__form__input" type="text" placeholder="Tu nombre">
           <input class="contact__form__input" type="email" placeholder="Tu correo electrónico">
           <textarea class="contact__form__input contact__form__input--textarea" placeholder="Tu mensaje"></textarea>
           <input class="contact__form__button" type="submit" value="Enviar">
         </form>
-        <ul class="contact__info">
+        <ul class="contact__info flex-column">
           <li class="contact__info__list">
             <img class="contact__info__list__img" src="public/images/svg/location.svg" alt="Reloj">
-            <p class="contact__info__list__text">Av. Arequipa 305, ASA, Arequipa</p>
+            <p>Av. Arequipa 305, ASA, Arequipa</p>
           </li>
           <li class="contact__info__list">
             <img class="contact__info__list__img" src="public/images/svg/email.svg" alt="Reloj">
-            <p class="contact__info__list__text">info@coffeeshopwebsite.com</p>
+            <p>info@coffeeshopwebsite.com</p>
           </li>
           <li class="contact__info__list">
             <img class="contact__info__list__img" src="public/images/svg/phone.svg" alt="Reloj">
-            <p class="contact__info__list__text">914314466</p>
+            <p>914314466</p>
           </li>
           <li class="contact__info__list">
             <img class="contact__info__list__img" src="public/images/svg/clock.svg" alt="Reloj">
-            <p class="contact__info__list__text">Lunes a Viernes: 9:00 AM - 5:00 PM</p>
+            <p>Lunes a Viernes: 9:00 AM - 5:00 PM</p>
           </li>
           <li class="contact__info__list">
             <img class="contact__info__list__img" src="public/images/svg/clock.svg" alt="Reloj">
-            <p class="contact__info__list__text">Sábados: 10:00 AM - 3:00 PM</p>
+            <p>Sábados: 10:00 AM - 3:00 PM</p>
           </li>
           <li class="contact__info__list">
             <img class="contact__info__list__img" src="public/images/svg/clock.svg" alt="Reloj">
-            <p class="contact__info__list__text">Domingos: Cerrado</p>
+            <p>Domingos: Cerrado</p>
           </li>
           <li class="contact__info__list">
             <img class="contact__info__list__img" src="public/images/svg/internet.svg" alt="Internet">
-            <p class="contact__info__list__text">www.coffeehouse.com</p>
+            <p>www.coffeehouse.com</p>
           </li>
         </ul>
       </div>
@@ -213,7 +210,7 @@
 
     <!-- Pie de página -->
     <footer class="footer">
-      <div class="footer-container content-width">
+      <div class="footer-container content-width flex-column">
         <p>&copy; 2025 Coffee Shop</p>
         <div class="social">
           <a class="social__link" href="#">

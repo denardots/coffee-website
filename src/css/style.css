@@ -213,6 +213,9 @@ img {
 .header__nav--active {
   left: 0;
 }
+.header__button--inactive {
+  opacity: 0;
+}
 
 /* Estilos de Principal */
 .main {
@@ -385,7 +388,7 @@ img {
 }
 .contact__form__input {
   padding: var(--n-size) 0.8rem;
-  border-radius: var(--s-size);
+  border-radius: var(--s-size); 
   border: 1px solid #ccc;
   outline: none;
 }
@@ -442,7 +445,7 @@ img {
   }
 }
 
-/* Estilos en Desktop */
+/* Estilos en PC */
 @media (width >= 900px) {
   .social__link {
     width: var(--xl-size);

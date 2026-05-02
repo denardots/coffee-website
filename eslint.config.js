@@ -26,7 +26,6 @@ export default [
       "eqeqeq": "error",
       "func-style": ["error", "declaration", {"allowArrowFunctions": true}],
       "grouped-accessor-pairs": ["error", "setBeforeGet"],
-      // "id-length": ["error", {"min": 3}],
       "init-declarations": "error",
       "max-classes-per-file": "error",
       "max-lines": ["error", {"max": 300, "skipBlankLines": true, "skipComments": true}],
@@ -102,7 +101,7 @@ export default [
       "@html-eslint/lowercase": "error",
       "@html-eslint/no-multiple-empty-lines": "error",
       "@html-eslint/no-trailing-spaces": "error",
-      "@html-eslint/sort-attrs": ["error", {"priority": ["id", "class", "rel", "type", "name", "src", "href"]}]
+      "@html-eslint/sort-attrs": ["error", {"priority": ["id", "class", "rel", "type", "name", "src", "href", "property", "content"]}]
     }
   }
 ];

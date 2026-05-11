@@ -68,7 +68,7 @@ html {
 }
 body {
   display: grid;
-  grid-template: auto 100vh repeat(5, auto) / 100%;
+  grid-template: auto 100vh repeat(6, auto) / 100%;
   grid-template-areas:
     "header"
     "main"
